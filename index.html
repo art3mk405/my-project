@@ -5,33 +5,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Головна сторінка музею історії Києва</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            background-color: #f5f5dc;
-            text-align: center;
-            color: #333;
+        h1 {
+            font-size: 32px;
+            text-transform: uppercase;
         }
 
-        a {
-            color: darkblue;
+        .custom-box {
+            border: 2px solid darkred;
+            padding: 10px;
+            background-color: #ffeecc;
         }
     </style>
 </head>
 
-<body>
+<body class="container">
     <nav>
-        <a href="index.html">Головна</a> | 
+        <a href="index.html">Головна</a> |
         <a href="about.html">Про нас</a> |
         <a href="contacts.html">Контакти</a> |
         <a href="services.html">Послуги</a>
     </nav>
-        
-    <h1>
-        <font size="6" color="darkred">Музей історії Києва</font>
-    </h1>
-        <p><font size="4"><b>Ласкаво просимо до музею історії Києва!</b></font></p>
-            <p>Тут ви дізнаєтесь про унікальне минуле столиці України.</p> 
-        <h2 id="museum">Як виглядає наш музей</h2>
+
+    <h1 style="color: rgb(162, 35, 19); font-weight: bold;">Музей історії Києва</h1>
+    <p>
+        <font size="4"><b>Ласкаво просимо до музею історії Києва!</b></font>
+    </p>
+    <p class="special-paragraph">Музей історії міста Києва – об’єднання 9 музеїв-філій, що органічно доповнюють загальну
+        концепцію Музею та висвітлюють різні аспекти історії, літератури, науки, мистецтва, суспільно-політичного життя
+        міста, а через його столичний статус – й всієї країни. </p>
+    <div class="custom-box">
+        <p style="font-size: 20px; color: darkblue;">Музей історії міста Києва заснований 14 листопада 1978 року і
+            відкритий у 1979 році. Він представляє різноманітні історичні, мистецькі, освітні проекти та різні аспекти
+            історії, літератури, науки, мистецтва, суспільно-політичного життя міста. З 06 червня 2012 року музей
+            розташований біля станції метро “Театральна” за адресою: вул. Богдана Хмельницького, 7, де відновив свою
+            виставкову діяльність і нині функціонує як Музейно-виставковий центр.</p>
+    </div>
+    <h2 id="museum">Як виглядає наш музей</h2>
     <img src="img/museum.webp" width="500" height="400" alt="Музей історії Києва" />
     <a href="img/museum2.jpg" target="_blank">
         <img src="img/museum2.jpg" width="500" height="400" alt="Музей" />
