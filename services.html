@@ -1,16 +1,149 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Послуги</title>
-  </head>
-  <body>
-    <h1>Послуги</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nisi
-      iusto debitis quis incidunt in soluta beatae odio, enim dolorum corporis
-      nemo aliquid accusantium vero saepe culpa ad nulla animi?
-    </p>
-  </body>
+    <style>
+        body {
+            background-color: #f5f5dc;
+            text-align: center;
+            color: #333;
+        }
+        a {
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Головна</a> |
+        <a href="about.html">Про нас</a> |
+        <a href="contacts.html">Контакти</a> |
+        <a href="services.html">Послуги</a>
+    </nav>
+    
+    <h1><font size="6" color="darkred">Наші послуги</font></h1>
+    <p><font size="4">Ми пропонуємо різноманітні послуги для відвідувачів музею:</font></p>
+    
+    <h2 id="excursions">Екскурсії</h2>
+
+    <ul type="disc">
+        <li>Індивідуальні екскурсії</li>
+        <li>Групові тури</li>
+        <li>Дитячі екскурсії</li>
+    </ul>
+
+    <a href="img/tour.jpg" target="_blank">
+        <img src="img/tour.jpg" width="500" height="300" alt="Екскурсія">
+    </a>
+    <a href="img/tour2.jpg" target="_blank">
+        <img src="img/tour2.jpg" width="500" height="300" alt="Музей історії Києва">
+    </a>
+    <a href="img/tour3.jpg" target="_blank">
+        <img src="img/tour3.jpg" width="500" height="300" alt="Музей історії Києва">
+    </a>
+    <a href="img/tour4.jpg" target="_blank">
+        <img src="img/tour4.jpg" width="500" height="300" alt="Музей історії Києва">
+    </a>
+    
+    <h2>Додаткові послуги</h2>
+    <dl>
+        <dt><b>Оренда залів</b></dt>
+        <dd>- Можливість проведення конференцій та заходів.</dd>
+        <dt><b>Крамниця сувенірів</b></dt>
+        <dd>- Великий вибір сувенірної продукції.</dd>
+        <dt><b>Освітні програми</b></dt>
+        <dd>- Лекції та майстер-класи для дітей і дорослих.</dd>
+    </dl>
+    
+    <h2>Доступні екскурсії</h2>
+    <table border="2" align="center" width="80%">
+    <caption><b>Оберіть свій тип екскурсії</b></caption>
+    <tr bgcolor="#d3d3d3">
+        <th>Індивідуальна</th>
+        <th>Групова</th>
+        <th>Дитяча</th>
+        <th>VIP-тур</th>
+    </tr>
+    <tr>
+        <td><img src="img/indiv.jpg" width="150" height="100" alt="Індивідуальна екскурсія"></td>
+        <td><img src="img/group.jpg" width="150" height="100" alt="Групова екскурсія"></td>
+        <td><img src="img/kids.jpg" width="150" height="100" alt="Дитяча екскурсія"></td>
+        <td><img src="img/VIP.jpeg" width="150" height="100" alt="VIP-тур"></td>
+    </tr>
+    <tr>
+        <td><a href="contacts.html">Записатися</a></td>
+        <td><a href="contacts.html">Записатися</a></td>
+        <td><a href="contacts.html">Записатися</a></td>
+        <td><a href="contacts.html">Записатися</a></td>
+    </tr>
+    <tr>
+        <td>Персональна екскурсія з гідом</td>
+        <td>Групові тури від 5 осіб</td>
+        <td>Екскурсії для дітей з інтерактивом</td>
+        <td>Ексклюзивний тур для особливих гостей</td>
+    </tr>
+    
+</table>
+    
+<h2>Тарифи на послуги музею</h2>
+<table border="2" align="center" width="80%" cellspacing="1" cellpadding="20">
+    <caption><b>Ціни на екскурсії та послуги музею</b></caption>
+    <colgroup>
+        <col span="1" style="background-color:#f2f2f2;">
+        <col span="1" style="background-color:#e6f7ff;">
+        <col span="2" style="background-color:#ffffcc;">
+        <col span="1" style="background-color:#f9e6ff;">
+    </colgroup>
+
+    <tr bgcolor="#d3d3d3" align="center">
+        <th rowspan="2">Послуга</th>
+        <th rowspan="2">Час</th>
+        <th colspan="2">Ціна (грн)</th>
+        <th rowspan="2">Додаткові опції</th>
+    </tr>
+    <tr bgcolor="#d3d3d3" align="center">
+        <th>Дитяча</th>
+        <th>Доросла</th>
+    </tr>
+
+    <tr align="center">
+        <td rowspan="2">Екскурсія</td>
+        <td>30 хв</td>
+        <td>50</td>
+        <td>100</td>
+        <td rowspan="2">Аудіогід +50 грн</td>
+    </tr>
+    <tr align="center">
+        <td>60 хв</td>
+        <td>80</td>
+        <td>150</td>
+    </tr>
+
+    <tr align="center">
+        <td rowspan="2">VIP-тур</td>
+        <td>60 хв</td>
+        <td>200</td>
+        <td>350</td>
+        <td rowspan="2">Персональний гід</td>
+    </tr>
+    <tr align="center">
+        <td>120 хв</td>
+        <td>350</td>
+        <td>600</td>
+    </tr>
+
+    <tr align="center">
+        <td>Оренда залу</td>
+        <td>1 година</td>
+        <td colspan="2">500</td>
+        <td>Технічна підтримка</td>
+    </tr>
+</table>
+
+    <h3>Записатись на екскурсію:</h3>
+    <p>Зареєструйтеся за <a href="contacts.html">контактами</a> або відвідайте наш музей.</p>
+</body>
 </html>

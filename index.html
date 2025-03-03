@@ -1,18 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="author" content="Волошин Артем">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Головна сторінка</title>
-  </head>
-  <body>
-    <h1>Ласкаво просимо!</h1>
+    <title>Головна сторінка музею історії Києва</title>
+    <style>
+        body {
+            background-color: #f5f5dc;
+            text-align: center;
+            color: #333;
+        }
+
+        a {
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Головна</a> | 
+        <a href="about.html">Про нас</a> |
+        <a href="contacts.html">Контакти</a> |
+        <a href="services.html">Послуги</a>
+    </nav>
+        
+    <h1>
+        <font size="6" color="darkred">Музей історії Києва</font>
+    </h1>
+        <p><font size="4"><b>Ласкаво просимо до музею історії Києва!</b></font></p>
+            <p>Тут ви дізнаєтесь про унікальне минуле столиці України.</p> 
+        <h2 id="museum">Як виглядає наш музей</h2>
+    <img src="img/museum.webp" width="500" height="400" alt="Музей історії Києва" />
+    <a href="img/museum2.jpg" target="_blank">
+        <img src="img/museum2.jpg" width="500" height="400" alt="Музей" />
+    </a>
+
+    <h2>Що ви знайдете в музеї?</h2>
+    <ul type="square">
+        <li>Старовинні артефакти</li>
+        <li>Історичні документи</li>
+        <li>Мультимедійні експозиції</li>
+    </ul>
+
+    <h3>Детальніше про Київ:</h3>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque corrupti
-      odio tenetur fugit? Sequi architecto cumque quam ullam commodi
-      exercitationem aut, quaerat natus. Accusamus quibusdam dolores non? Eos,
-      voluptatem quasi?
+        Дізнайтесь більше про історію Києва на
+        <a href="https://uk.wikipedia.org/wiki/Київ" target="_blank">Вікіпедії</a>.
     </p>
-  </body>
+    <a href="services.html#excursions">Дізнатися про екскурсії</a>
+
+    <p>Переглянути як виглядає музей можна тут</p>
+    <a href="#museum">Вигляд музею</a>
+</body>
+
 </html>
