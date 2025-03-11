@@ -87,3 +87,44 @@ dl dd {
     margin-left: 20px;
     font-size: 14px;
 }
+
+nav a {
+    color: darkblue;
+    font-weight: bold;
+}
+
+ul a {
+    color: green;
+}
+
+.custom-box p {
+    font-size: 24px;
+    color: darkblue;
+}
+
+h2 + p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+h2 + ul {
+    border: 1px solid darkred;
+    padding: 10px;
+}
+
+nav > a {
+    text-transform: uppercase;
+}
+
+td > a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+img + p {
+    margin-top: 15px;
+}
+
+div > p:first-child {
+    font-style: italic;
+}
