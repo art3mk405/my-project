@@ -6,6 +6,7 @@ body {
     color: #333; 
     line-height: 1.6; 
     text-align: center; 
+    position: relative
 }
 
 h1, h2, h3 {
@@ -23,11 +24,6 @@ h1, h2, h3 {
 a {
     color: darkblue;
     text-decoration: none;
-}
-
-a:hover {
-    color: red !important;
-    text-decoration:none;
 }
 
 .container {
@@ -71,6 +67,12 @@ ul {
     color: #333;
 }
 
+ul li:first-child {
+    font-weight: bold;
+    color: darkgreen;
+}
+
+
 ol {
     list-style-type: upper-roman;
     padding-left: 20px;
@@ -88,9 +90,41 @@ dl dd {
     font-size: 14px;
 }
 
-nav a {
+nav a:link {
     color: darkblue;
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:visited {
+    color: purple;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+nav a:active {
+    color: orange;
+    font-style: italic;
+}
+
+a:link {
+    color: #0066cc;
+}
+
+a:visited {
+    color: #bc5bbc;
+}
+
+a:hover {
+    color: #cc0000;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #ff6600;
 }
 
 ul a {
@@ -128,3 +162,124 @@ img + p {
 div > p:first-child {
     font-style: italic;
 }
+
+.info-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 50px auto;
+    width: 90%;
+    background-color: #fff5e6;
+    text-align: center;
+}
+
+.highlight {
+    font-weight: bold;
+    color: rgb(35, 139, 0);
+    background-color: #fff0f0;
+    padding: 2px 4px;
+}
+
+.expocard {
+    position: absolute;
+    top: 1800px;
+    left: 20px;
+    width: 220px;
+    padding: 10px;
+    background-color: #fff8dc;
+    border: 2px solid darkred;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.block-wrapper {
+    position: relative;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: #fff0f5;
+    border: 1px solid #999;
+}
+
+.label {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: rgb(209, 19, 57);
+    color: white;
+    padding: 4px 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.ticket-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: darkred;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.ticket-button:hover {
+    background-color: #a60000;
+}
+
+
+.expocard {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fffafa;
+    border: 1px solid #ccc;
+}
+
+.float-left {
+    float: left;
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+    border: 2px solid darkred;
+}
+
+.excursion-card {
+    background-color: #e1e1e1;
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+.exhibition-title::before {
+    content: "🎨 ";
+    color: orange;
+}
+
+.exhibition-title::after {
+    content: " 📜";
+    color: green;
+}
+
+.interactive-title::before {
+    content: "🖥️ ";
+    color: blue;
+}
+
+.interactive-title::after {
+    content: " 🚀";
+    color: red;
+}
+
+.archive-title::before {
+    content: "📚 ";
+    color: darkred;
+}
+
+.archive-title::after {
+    content: " 🏛️";
+    color: purple;
+}
+
