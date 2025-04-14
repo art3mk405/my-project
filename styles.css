@@ -240,9 +240,8 @@ div > p:first-child {
 
 .float-left {
     float: left;
-    width: 400px;
-    height: auto;
-    margin-right: 20px;
+    width: 200px;
+    height: 150px;
     border: 2px solid darkred;
 }
 
@@ -282,4 +281,23 @@ div > p:first-child {
     content: " 🏛️";
     color: purple;
 }
+
+
+.dialog-button {
+    background-color: #fec383;
+    color: rgb(122, 2, 2);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px; 
+    cursor: pointer;
+    margin: 20px;           
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+    transition: background-color 0.3s ease;
+}
+
+.dialog-button:hover {
+    background-color: #ffdb4d;    
+}
+
 
