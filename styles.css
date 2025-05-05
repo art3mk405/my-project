@@ -300,4 +300,27 @@ div > p:first-child {
     background-color: #ffdb4d;    
 }
 
-
+#exhibit-list li {
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  #exhibit-list li.active {
+    background-color: #d3f2d3;
+    font-weight: bold;
+  }
+  
+  #menu button {
+    margin: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #f1f1f1;
+    transition: background-color 0.2s ease;
+  }
+  
+  #menu button:hover {
+    background-color: #d1e7dd;
+  }
+  

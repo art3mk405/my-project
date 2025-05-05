@@ -111,5 +111,94 @@ function domManipulation() {
     }, 5000);
 }
 
+window.onload = function () {
+
+    const ticketButton = document.querySelector(".ticket-button");
+    if (ticketButton) {
+        ticketButton.onclick = function () {
+            alert("Дякуємо за інтерес до нашого музею!");
+        };
+    }
 
 
+    const museumImage = document.querySelector('img[src="img/museum.webp"]');
+    function showAlert() {
+        alert("Це головна будівля Музею історії Києва");
+    }
+    function addBorder() {
+        museumImage.style.border = "10px solid darkgreen";
+    }
+    function logToConsole() {
+        console.log("Клік по зображенню музею зафіксовано.");
+    }
+    if (museumImage) {
+        museumImage.addEventListener("click", showAlert);
+        museumImage.addEventListener("click", addBorder);
+        museumImage.addEventListener("click", logToConsole);
+    }
+
+
+    const rateBtn = document.getElementById("rate-btn");
+    if (rateBtn) {
+        const rateHandler = {
+            handleEvent(event) {
+                let score = prompt("Оцініть експозицію від 1 до 5:");
+                if (score >= 1 && score <= 5) {
+                    alert("Дякуємо за вашу оцінку!");
+
+                    console.log("Подія спрацювала на:", event.currentTarget);
+                    event.currentTarget.style.backgroundColor = "#ffd4d4";
+                    event.currentTarget.textContent = "Оцінка врахована";
+
+                    
+                    rateBtn.removeEventListener("click", rateHandler);
+                    console.log("Обробник оцінки видалено.");
+                } else {
+                    alert("Будь ласка, введіть число від 1 до 5.");
+                }
+            }
+        };
+
+        rateBtn.addEventListener("click", rateHandler);
+    }
+
+
+    const exhibitList = document.getElementById("exhibit-list");
+    if (exhibitList) {
+        exhibitList.addEventListener("click", function (event) {
+            if (event.target.tagName === "LI") {
+                const items = exhibitList.querySelectorAll("li");
+                items.forEach(item => item.classList.remove("active"));
+                event.target.classList.add("active");
+            }
+        });
+    }
+
+
+    const menu = document.getElementById("menu");
+
+if (menu) {
+    menu.addEventListener("click", function (event) {
+        const button = event.target.closest("button");
+        if (!button) return;
+
+        const action = button.dataset.action;
+
+        switch (action) {
+            case "info":
+                alert("Наш музей був заснований у 1980 році й зберігає понад 10 тисяч експонатів.");
+                break;
+            case "tickets":
+                alert("Квитки можна придбати онлайн або в касі музею.");
+                break;
+            case "excursion":
+                alert("Запис на екскурсію відкрито! Наш гід вас чекає.");
+                break;
+            default:
+                console.log("Невідома дія:", action);
+        }
+    });
+}
+
+
+};
