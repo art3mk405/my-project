@@ -6,30 +6,30 @@ function museumUserDialog() {
     } else {
         alert("Привіт! Дуже раді, що завітали до Музею історії Києва, навіть якщо Ви не ввели ім’я.");
     }
-    
+
     let wantsHistory = confirm("Бажаєте дізнатись коротку історію нашого музею?");
     if (wantsHistory) {
         alert("Музей історії Києва був заснований у 1978 році і відкритий у 1979 році. Він об’єднує 9 філій, кожна з яких розповідає свою унікальну історію міста!");
     } else {
         alert("Добре, продовжуйте огляд і самі відкривайте історію міста!");
     }
-    
+
     const facts = [
         "Київ є одним із найстаріших міст Східної Європи з історією понад 1500 років.",
         "Столиця України, Київ, відомий своїми зеленими парками та вражаючою архітектурою.",
         "На території Києва знаходиться знаменита Києво-Печерська Лавра — один із головних духовних центрів Східної Європи."
     ];
     for (let i = 0; i < facts.length; i++) {
-        console.log("Цікавий факт (" + (i+1) + "): " + facts[i]);
+        console.log("Цікавий факт (" + (i + 1) + "): " + facts[i]);
     }
 }
 
 
 function developerInfo(lastName, firstName, position = "Розробник сайту") {
     alert("Інформація про розробника:\n" +
-          "Прізвище: " + lastName + "\n" +
-          "Ім'я: " + firstName + "\n" +
-          "Посада: " + position);
+        "Прізвище: " + lastName + "\n" +
+        "Ім'я: " + firstName + "\n" +
+        "Посада: " + position);
 }
 
 function compareStrings() {
@@ -110,9 +110,14 @@ function domManipulation() {
         }, 5000);
     }, 5000);
 }
+// шукати в контактс
+function thankVisitor() {
+    alert("Дякуємо за звернення! Ми зв’яжемося з вами найближчим часом.");
+}
+
 
 window.onload = function () {
-
+    //кнопка купити квиток
     const ticketButton = document.querySelector(".ticket-button");
     if (ticketButton) {
         ticketButton.onclick = function () {
@@ -120,7 +125,7 @@ window.onload = function () {
         };
     }
 
-
+    //перша картинка в індекс хтмл
     const museumImage = document.querySelector('img[src="img/museum.webp"]');
     function showAlert() {
         alert("Це головна будівля Музею історії Києва");
@@ -137,7 +142,7 @@ window.onload = function () {
         museumImage.addEventListener("click", logToConsole);
     }
 
-
+    // в сервіс хтмл
     const rateBtn = document.getElementById("rate-btn");
     if (rateBtn) {
         const rateHandler = {
@@ -150,7 +155,7 @@ window.onload = function () {
                     event.currentTarget.style.backgroundColor = "#ffd4d4";
                     event.currentTarget.textContent = "Оцінка врахована";
 
-                    
+
                     rateBtn.removeEventListener("click", rateHandler);
                     console.log("Обробник оцінки видалено.");
                 } else {
@@ -162,7 +167,7 @@ window.onload = function () {
         rateBtn.addEventListener("click", rateHandler);
     }
 
-
+    // в сервіс
     const exhibitList = document.getElementById("exhibit-list");
     if (exhibitList) {
         exhibitList.addEventListener("click", function (event) {
@@ -174,31 +179,81 @@ window.onload = function () {
         });
     }
 
-
+    // в серсвіс хтмл
     const menu = document.getElementById("menu");
+    if (menu) {
+        menu.addEventListener("click", function (event) {
+            const button = event.target.closest("button");
+            if (!button) return;
 
-if (menu) {
-    menu.addEventListener("click", function (event) {
-        const button = event.target.closest("button");
-        if (!button) return;
+            const action = button.dataset.action;
 
-        const action = button.dataset.action;
+            switch (action) {
+                case "info":
+                    alert("Наш музей був заснований у 1980 році й зберігає понад 10 тисяч експонатів.");
+                    break;
+                case "tickets":
+                    alert("Квитки можна придбати онлайн або в касі музею.");
+                    break;
+                case "excursion":
+                    alert("Запис на екскурсію відкрито! Наш гід вас чекає.");
+                    break;
+                default:
+                    console.log("Невідома дія:", action);
+            }
+        });
+    }
+    //about html
+    const partnersList = document.getElementById("partners-list");
 
-        switch (action) {
-            case "info":
-                alert("Наш музей був заснований у 1980 році й зберігає понад 10 тисяч експонатів.");
-                break;
-            case "tickets":
-                alert("Квитки можна придбати онлайн або в касі музею.");
-                break;
-            case "excursion":
-                alert("Запис на екскурсію відкрито! Наш гід вас чекає.");
-                break;
-            default:
-                console.log("Невідома дія:", action);
-        }
+    if (partnersList) {
+        const items = partnersList.querySelectorAll("li");
+
+        items.forEach(item => {
+            item.addEventListener("mouseover", function (event) {
+                event.target.style.backgroundColor = "#fff3cd";
+                event.target.style.fontWeight = "bold";
+                console.log("Навели на:", event.target.textContent);
+            });
+
+            item.addEventListener("mouseout", function (event) {
+                event.target.style.backgroundColor = "";
+                event.target.style.fontWeight = "";
+                console.log("Пішли на:", event.relatedTarget?.textContent);
+            });
+        });
+    }
+
+    // about html
+    const simpleExhibits = document.querySelectorAll(".exhibit");
+
+    simpleExhibits.forEach(exhibit => {
+        let isDragging = false;
+        let offsetX = 0, offsetY = 0;
+
+        exhibit.addEventListener("mousedown", function (e) {
+            isDragging = true;
+            offsetX = e.clientX - exhibit.offsetLeft;
+            offsetY = e.clientY - exhibit.offsetTop;
+            exhibit.style.cursor = "grabbing";
+        });
+
+        document.addEventListener("mousemove", function (e) {
+            if (isDragging) {
+                exhibit.style.left = (e.clientX - offsetX) + "px";
+                exhibit.style.top = (e.clientY - offsetY) + "px";
+            }
+        });
+
+        document.addEventListener("mouseup", function () {
+            isDragging = false;
+            exhibit.style.cursor = "grab";
+        });
     });
+
+
+
+
+
+
 }
-
-
-};

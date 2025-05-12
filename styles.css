@@ -1,15 +1,16 @@
-
 body {
-    background-color: #f5f5dc; 
-    font-family: Arial, sans-serif; 
-    font-size: 16px; 
-    color: #333; 
-    line-height: 1.6; 
-    text-align: center; 
+    background-color: #f5f5dc;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
     position: relative
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: "Georgia", serif;
     color: darkred;
     text-align: center;
@@ -50,7 +51,8 @@ caption {
     margin-bottom: 10px;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #000;
     padding: 10px;
     text-align: center;
@@ -136,30 +138,30 @@ ul a {
     color: darkblue;
 }
 
-h2 + p {
+h2+p {
     margin-top: 10px;
     font-weight: bold;
 }
 
-h2 + ul {
+h2+ul {
     border: 1px solid darkred;
     padding: 10px;
 }
 
-nav > a {
+nav>a {
     text-transform: uppercase;
 }
 
-td > a {
+td>a {
     text-decoration: none;
     font-weight: bold;
 }
 
-img + p {
+img+p {
     margin-top: 15px;
 }
 
-div > p:first-child {
+div>p:first-child {
     font-style: italic;
 }
 
@@ -187,7 +189,7 @@ div > p:first-child {
     padding: 10px;
     background-color: #fff8dc;
     border: 2px solid darkred;
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .block-wrapper {
@@ -289,38 +291,87 @@ div > p:first-child {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    font-size: 16px; 
+    font-size: 16px;
     cursor: pointer;
-    margin: 20px;           
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
 .dialog-button:hover {
-    background-color: #ffdb4d;    
+    background-color: #ffdb4d;
 }
 
 #exhibit-list li {
     cursor: pointer;
     padding: 5px;
     transition: background-color 0.3s ease;
-  }
-  
-  #exhibit-list li.active {
+}
+
+#exhibit-list li.active {
     background-color: #d3f2d3;
     font-weight: bold;
-  }
-  
-  #menu button {
+}
+
+#menu button {
     margin: 5px;
     padding: 10px 15px;
     cursor: pointer;
     border: none;
     background-color: #f1f1f1;
     transition: background-color 0.2s ease;
-  }
-  
-  #menu button:hover {
+}
+
+#menu button:hover {
     background-color: #d1e7dd;
-  }
-  
+}
+
+#museum-area {
+    position: relative;
+    height: 300px;
+    border: 2px dashed #aaa;
+    margin: 30px auto;
+    width: 90%;
+    background-color: #fefaf1;
+}
+
+.exhibit {
+    position: absolute;
+    z-index: 10;
+    padding: 10px 15px;
+    background-color: #fff0c9;
+    border: 1px solid #999;
+    font-size: 16px;
+    cursor: grab;
+    font-weight: bold;
+    user-select: none;
+}
+
+#expA {
+    top: 20px;
+    left: 30px;
+}
+
+#expB {
+    top: 100px;
+    left: 30px;
+}
+
+#display-zone {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 400px; 
+    height: 180px; 
+    border: 2px dashed darkred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    background-color: rgba(255, 247, 240, 0.8);
+    color: darkred;
+    z-index: 1;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 10px;
+}
